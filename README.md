@@ -4,10 +4,16 @@ A full-stack e-commerce web application built with **Django REST Framework** on 
 
 ---
 
+
+## 🚀 Project video
+
+https://github.com/user-attachments/assets/2b582399-723f-4a8a-ac10-ba91b341ffa8
+
+---
+
 ## 📋 Table of Contents
 
 - [Project Overview](#-project-overview)
-- [Project Demo](#-live-demo)
 - [Tech Stack](#-tech-stack)
 - [Features](#-features)
 - [System Architecture](#-system-architecture)
@@ -40,10 +46,6 @@ This application implements a complete e-commerce workflow using a **decoupled (
 | Database | SQLite | Data persistence (products, orders, users) |
 
 The React frontend communicates with the Django backend exclusively through REST API calls — making the frontend easily replaceable or extensible (e.g., a mobile app could consume the same API).
-
----
-
-## 🚀 Project Demo
 
 
 
