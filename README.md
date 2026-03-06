@@ -7,7 +7,7 @@ A full-stack e-commerce web application built with **Django REST Framework** on 
 
 ## 🚀 Project video
 
-https://github.com/user-attachments/assets/2b582399-723f-4a8a-ac10-ba91b341ffa8
+https://github.com/user-attachments/assets/0275fbaf-f032-44a1-8269-92dbf133b8de
 
 ---
 
