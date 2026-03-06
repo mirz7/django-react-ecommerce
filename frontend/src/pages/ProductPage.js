@@ -56,10 +56,15 @@ function ProductPage() {
 
 
   return (
+<<<<<<< HEAD
     <div className="py-4">
       <Link to='/' className='btn btn-outline-secondary mb-4 rounded-pill px-4'>
         <i className="fas fa-arrow-left me-2"></i> Go Back
       </Link>
+=======
+    <div>
+      <Link to='/' className='btn btn-outline-primary my-3'>Go Back</Link>
+>>>>>>> cf8767a (added new features & refactored code)
       {loading ?
         <div>
           <Loader />
@@ -70,6 +75,7 @@ function ProductPage() {
           :
           <div>
             <Row>
+<<<<<<< HEAD
               <Col md={5} className="mb-4">
                 <Image src={product.image} alt={product.name} fluid className="rounded shadow-sm w-100" style={{objectFit: 'cover'}} />
               </Col>
@@ -90,12 +96,40 @@ function ProductPage() {
 
                   <ListGroup.Item className="bg-transparent border-0 px-0 text-muted">
                     {product.description}
+=======
+              <Col md={6}>
+                <Image src={product.image} alt={product.name} fluid />
+              </Col>
+
+              <Col md={3}>
+                <ListGroup variant='flush'>
+                  <ListGroup.Item >
+                    <h3>{product.name}</h3>
+                  </ListGroup.Item>
+
+                  <ListGroup.Item >
+                    <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#fcfc03'} />
+                  </ListGroup.Item>
+
+                  <ListGroup.Item >
+                    Price: ${product.price}
+                  </ListGroup.Item>
+
+                  <ListGroup.Item >
+                    Description: {product.description}
+>>>>>>> cf8767a (added new features & refactored code)
                   </ListGroup.Item>
                 </ListGroup>
               </Col>
 
+<<<<<<< HEAD
               <Col md={3}>
                 <Card className="pk-card border-0">
+=======
+
+              <Col md={3}>
+                <Card>
+>>>>>>> cf8767a (added new features & refactored code)
                   <ListGroup variant='flush'>
                     <ListGroup.Item>
                       <Row>
@@ -136,6 +170,7 @@ function ProductPage() {
                       </ListGroup.Item>
                     )}
 
+<<<<<<< HEAD
                     <ListGroup.Item className="bg-transparent border-0 pt-4 pb-3">
                       <Button
                         onClick={addToCartHandler}
@@ -143,6 +178,15 @@ function ProductPage() {
                         disabled={product.countInStock === 0}
                         type='button'>
                         <i className="fas fa-shopping-cart me-2"></i> Add to Cart
+=======
+                    <ListGroup.Item>
+                      <Button
+                        onClick={addToCartHandler}
+                        className='w-100'
+                        disabled={product.countInStock === 0}
+                        type='button'>
+                        Add to Cart
+>>>>>>> cf8767a (added new features & refactored code)
                       </Button>
                     </ListGroup.Item>
                   </ListGroup>

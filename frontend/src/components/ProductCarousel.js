@@ -24,7 +24,11 @@ function ProductCarousel() {
         </> : error ?
             <Message variant='danger'>{error}</Message> :
 
+<<<<<<< HEAD
             <Carousel pause='hover' className='pk-card border-0 mb-4'>
+=======
+            <Carousel pause='hover' className='bg-dark'>
+>>>>>>> cf8767a (added new features & refactored code)
                 {products.map(product => (
                     <Carousel.Item key={product._id}>
                         <Link to={`/product/${product._id}`}>

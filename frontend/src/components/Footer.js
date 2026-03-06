@@ -5,7 +5,11 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 
 function Footer() {
   return (
+<<<<<<< HEAD
     <MDBFooter style={{backgroundColor: 'var(--pk-bg-surface)', borderTop: '1px solid var(--pk-border-light)'}} className='text-center text-lg-start text-muted mt-5'>
+=======
+    <MDBFooter bgColor='dark' className='text-center text-lg-start text-muted'>
+>>>>>>> cf8767a (added new features & refactored code)
       <section className='d-flex justify-content-center justify-content-lg-between p-3 border-bottom mt-4'>
         <div className='me-5 d-none d-lg-block'>
           <span>Get connected with us on social networks:</span>
@@ -107,9 +111,15 @@ function Footer() {
         </MDBContainer>
       </section>
 
+<<<<<<< HEAD
       <div className='text-center p-3' style={{ backgroundColor: 'var(--pk-bg-main)', color: 'var(--pk-text-muted)' }}>
         © 2022 Copyright: 
         <a className='text-reset fw-bold p-2 text-gradient' href='/'>
+=======
+      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
+        © 2022 Copyright: 
+        <a className='text-reset fw-bold p-2' href='/'>
+>>>>>>> cf8767a (added new features & refactored code)
            MyShop
         </a>
       </div>

@@ -12,7 +12,11 @@
   "files.autoSave": "afterDelay",
 
   // cursor
+<<<<<<< HEAD
   "editor.cursorSmoothCaretAnimation": "on",
+=======
+  "editor.cursorSmoothCaretAnimation": true,
+>>>>>>> cf8767a (added new features & refactored code)
   "editor.cursorBlinking": "expand",
 
   // terminal customization
@@ -70,10 +74,17 @@
   },
   "javascript.validate.enable": false, //disable all built-in syntax checking
   "editor.codeActionsOnSave": {
+<<<<<<< HEAD
     "source.fixAll.eslint": "explicit",
     "source.fixAll.tslint": "explicit",
     "source.organizeImports": "explicit",
     "javascript.updateImportsOnFileMove.enabled": "explicit"
+=======
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.organizeImports": true,
+    "javascript.updateImportsOnFileMove.enabled": true
+>>>>>>> cf8767a (added new features & refactored code)
   },
   "eslint.alwaysShowStatus": true,
   // emmet

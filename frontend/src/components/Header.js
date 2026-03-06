@@ -26,11 +26,19 @@ function Header() {
         navigate('/login')
     }
     return (
+<<<<<<< HEAD
         <header className="sticky-top w-100 z-3">
             <Navbar expand="lg" collapseOnSelect className="glass-effect py-3" style={{ borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
                 <Container>
                    <LinkContainer to='/'>
                         <Navbar.Brand className="px-0 fw-bold fs-3 text-gradient">ShopSeek</Navbar.Brand>
+=======
+        <header>
+            <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
+                <Container>
+                   <LinkContainer to='/'>
+                        <Navbar.Brand className="px-0">MyShop</Navbar.Brand>
+>>>>>>> cf8767a (added new features & refactored code)
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
