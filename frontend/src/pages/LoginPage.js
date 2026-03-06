@@ -31,7 +31,7 @@ function LoginPage() {
 
     return (
         <FormContainer>
-            <h1> Sign In</h1>
+            <h1 className="fw-bold text-gradient mb-4 text-center">Sign In</h1>
             {error && <Message variant='danger'>{error}</Message>}
 
             {loading &&
@@ -65,7 +65,7 @@ function LoginPage() {
                     ></Form.Control>
                 </Form.Group>
 
-                <Button type='submit' variant='primary' className='mt-3'>
+                <Button type='submit' className='mt-4 w-100 btn-pk-primary'>
                     Sign In
                 </Button>
             </Form>

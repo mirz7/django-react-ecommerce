@@ -36,8 +36,8 @@ function CartDetailsPage() {
     }
 
     return (
-        <Row>
-            <h2>SHOPPING CART</h2>
+        <Row className="py-4">
+            <h2 className="fw-bold mb-4 text-gradient">Shopping Cart</h2>
 
             <Col md={8}>
                 {cartItems.length === 0 ? (
@@ -48,21 +48,21 @@ function CartDetailsPage() {
                         <Link to='/' className='btn btn-primary'>Go Back</Link>
                     </>
                 ) : (
-                    <ListGroup variant='flush'>
+                    <ListGroup variant='flush' className="pk-card mb-4">
                         {cartItems.map(item => (
-                            <ListGroup.Item key={item.product}>
-                                <Row>
+                            <ListGroup.Item key={item.product} className="py-3 border-bottom">
+                                <Row className="align-items-center">
                                     <Col md={2}>
-                                        <Image src={item.image} alt={item.name} fluid rounded />
+                                        <Image src={item.image} alt={item.name} fluid rounded className="shadow-sm" style={{height: '80px', objectFit: 'cover'}} />
                                     </Col>
 
                                     <Col md={3}>
-                                        <Link to={`/product/${item.product}`}>
-                                            <strong>{item.name}</strong>
+                                        <Link to={`/product/${item.product}`} className="fw-bold text-dark text-decoration-none">
+                                            {item.name}
                                         </Link>
                                     </Col>
 
-                                    <Col md={2}>
+                                    <Col md={2} className="fw-bold text-gradient">
                                         ${item.price}
                                     </Col>
 
@@ -71,6 +71,8 @@ function CartDetailsPage() {
                                             as="select"
                                             value={item.qty}
                                             onChange={(e) => dispatch(addToCart(item.product, Number(e.target.value)))}
+                                            className="shadow-sm border-0"
+                                            style={{ backgroundColor: 'var(--pk-bg-main)' }}
                                         >
                                             {
                                                 [...Array(item.countInStock).keys()].map(x => (
@@ -85,7 +87,8 @@ function CartDetailsPage() {
                                     <Col md={1}>
                                         <Button
                                             type='button'
-                                            variant='default'
+                                            variant='light'
+                                            className="text-danger shadow-sm rounded-circle"
                                             onClick={() => removeFromCartHandler(item.product)}
                                         >
                                             <i className='fas fa-trash'></i>
@@ -99,16 +102,16 @@ function CartDetailsPage() {
             </Col>
 
             <Col md={4}>
-                <Card>
+                <Card className="pk-card border-0">
                     <ListGroup variant='flush'>
-                        <ListGroup.Item>
-                            <h2>Subtotal Item: ({cartItems.reduce((acc, item) => acc + item.qty, 0)})</h2>
-                            <h4> Price: ${cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}</h4>
+                        <ListGroup.Item className="bg-transparent border-0 pt-4 pb-3">
+                            <h4 className="fw-bold text-muted mb-3">Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items</h4>
+                            <h3 className="fw-bold text-gradient m-0"> ${cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)}</h3>
                         </ListGroup.Item>
 
-                        <ListGroup.Item>
+                        <ListGroup.Item className="bg-transparent border-0 pt-0 pb-4">
                             <Button type='button'
-                                className='w-100'
+                                className='w-100 btn-pk-primary shadow-sm mt-3'
                                 disabled={cartItems.length === 0}
                                 onClick={checkoutHandler}
                             >

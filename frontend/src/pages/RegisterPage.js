@@ -40,7 +40,7 @@ function RegisterPage() {
 
   return (
       <FormContainer>
-          <h1>Registration</h1>
+          <h1 className="fw-bold text-gradient mb-4 text-center">Registration</h1>
           {message && <Message variant='danger'>{message}</Message>}
           {error && <Message variant='danger'>{error}</Message>}
 
@@ -62,42 +62,42 @@ function RegisterPage() {
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                   ></Form.Control>
-
-                  <Form.Group controlId='email'>
-                      <Form.Label className='mt-3'>Email Address</Form.Label>
-                      <Form.Control
-                          required
-                          type='email'
-                          placeholder='Enter Email'
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                      ></Form.Control>
-                  </Form.Group>
-
-                  <Form.Group controlId='password'>
-                      <Form.Label className='mt-3'>Password</Form.Label>
-                      <Form.Control
-                          required
-                          type='password'
-                          placeholder='Enter Password'
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                      ></Form.Control>
-                  </Form.Group>
-
-                  <Form.Group controlId='passwordConfirm'>
-                      <Form.Label className='mt-3'>Confirm Password</Form.Label>
-                      <Form.Control
-                          required
-                          type='password'
-                          placeholder='Confirm Password'
-                          value={confirmPassword}
-                          onChange={(e) => setConfirmPassword(e.target.value)}
-                      ></Form.Control>
-                  </Form.Group>
               </Form.Group>
 
-              <Button type='submit' className='mt-3' variant='primary'>
+              <Form.Group controlId='email'>
+                  <Form.Label className='mt-3'>Email Address</Form.Label>
+                  <Form.Control
+                      required
+                      type='email'
+                      placeholder='Enter Email'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                  ></Form.Control>
+              </Form.Group>
+
+              <Form.Group controlId='password'>
+                  <Form.Label className='mt-3'>Password</Form.Label>
+                  <Form.Control
+                      required
+                      type='password'
+                      placeholder='Enter Password'
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                  ></Form.Control>
+              </Form.Group>
+
+              <Form.Group controlId='passwordConfirm'>
+                  <Form.Label className='mt-3'>Confirm Password</Form.Label>
+                  <Form.Control
+                      required
+                      type='password'
+                      placeholder='Confirm Password'
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                  ></Form.Control>
+              </Form.Group>
+
+              <Button type='submit' className='mt-4 w-100 btn-pk-primary'>
                   Register
               </Button>
 

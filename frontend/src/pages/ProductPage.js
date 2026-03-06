@@ -56,8 +56,10 @@ function ProductPage() {
 
 
   return (
-    <div>
-      <Link to='/' className='btn btn-outline-primary my-3'>Go Back</Link>
+    <div className="py-4">
+      <Link to='/' className='btn btn-outline-secondary mb-4 rounded-pill px-4'>
+        <i className="fas fa-arrow-left me-2"></i> Go Back
+      </Link>
       {loading ?
         <div>
           <Loader />
@@ -68,33 +70,32 @@ function ProductPage() {
           :
           <div>
             <Row>
-              <Col md={6}>
-                <Image src={product.image} alt={product.name} fluid />
+              <Col md={5} className="mb-4">
+                <Image src={product.image} alt={product.name} fluid className="rounded shadow-sm w-100" style={{objectFit: 'cover'}} />
               </Col>
 
-              <Col md={3}>
-                <ListGroup variant='flush'>
-                  <ListGroup.Item >
-                    <h3>{product.name}</h3>
+              <Col md={4} className="mb-4">
+                <ListGroup variant='flush' className="bg-transparent">
+                  <ListGroup.Item className="bg-transparent border-0 px-0">
+                    <h2 className="fw-bold mb-3">{product.name}</h2>
                   </ListGroup.Item>
 
-                  <ListGroup.Item >
-                    <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#fcfc03'} />
+                  <ListGroup.Item className="bg-transparent border-0 px-0 pb-3">
+                    <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#fbbf24'} />
                   </ListGroup.Item>
 
-                  <ListGroup.Item >
-                    Price: ${product.price}
+                  <ListGroup.Item className="bg-transparent border-0 px-0 pb-3">
+                    <h3 className="text-gradient fw-bold mb-0">${product.price}</h3>
                   </ListGroup.Item>
 
-                  <ListGroup.Item >
-                    Description: {product.description}
+                  <ListGroup.Item className="bg-transparent border-0 px-0 text-muted">
+                    {product.description}
                   </ListGroup.Item>
                 </ListGroup>
               </Col>
 
-
               <Col md={3}>
-                <Card>
+                <Card className="pk-card border-0">
                   <ListGroup variant='flush'>
                     <ListGroup.Item>
                       <Row>
@@ -135,13 +136,13 @@ function ProductPage() {
                       </ListGroup.Item>
                     )}
 
-                    <ListGroup.Item>
+                    <ListGroup.Item className="bg-transparent border-0 pt-4 pb-3">
                       <Button
                         onClick={addToCartHandler}
-                        className='w-100'
+                        className='w-100 btn-pk-primary shadow-sm'
                         disabled={product.countInStock === 0}
                         type='button'>
-                        Add to Cart
+                        <i className="fas fa-shopping-cart me-2"></i> Add to Cart
                       </Button>
                     </ListGroup.Item>
                   </ListGroup>

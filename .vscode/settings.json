@@ -12,7 +12,7 @@
   "files.autoSave": "afterDelay",
 
   // cursor
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",
 
   // terminal customization
@@ -70,10 +70,10 @@
   },
   "javascript.validate.enable": false, //disable all built-in syntax checking
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true,
-    "source.organizeImports": true,
-    "javascript.updateImportsOnFileMove.enabled": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.tslint": "explicit",
+    "source.organizeImports": "explicit",
+    "javascript.updateImportsOnFileMove.enabled": "explicit"
   },
   "eslint.alwaysShowStatus": true,
   // emmet
